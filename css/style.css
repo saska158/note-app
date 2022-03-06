@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-weight: 200;
+    line-height: 1.6;
+}
+
+header {
+    padding-top: 2em;
+}
+
+main {
+ 
+ width: 80%;
+ margin: 0 auto;
+ display: flex;
+ flex-direction: column;
+}
+
+.header-title {
+    font-size: 1.75rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+/*=========form==========*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    position: relative;
+    width: 60%;
+}
+
+textarea,
+textarea:focus {
+    color: white;
+    border: none;
+    outline: none;   
+    caret-color: white;  
+    width: 100%;
+    background: transparent;
+    resize: none;
+}
+
+#note-text {
+    font-size: 1.3rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+    backdrop-filter: brightness(70%);
+    padding: 1.5em;
+    white-space: pre-wrap;
+}
+
+#submit-button {
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+    align-self: flex-end;
+    background: transparent;
+    border: 0;
+    cursor: pointer;    
+}
+
+.tick {
+    display: block;
+    width: 25px;
+}
+
+/*============modal============*/
+ 
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1;
+    padding-top: 3em;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.open-modal {
+   opacity: 1;
+   visibility: visible;
+   transform: scale(1);
+   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;  
+}
+
+#modal-text {
+    width: 80%;
+    height: 80vh;
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 2.5em;
+    backdrop-filter: brightness(70%);
+    color: white;
+}
+
+#modal-close-button {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+}
+
+/*======notes========*/
+
+
+#notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.note {
+    width: 200px;
+    margin: 16px;
+    box-sizing: border-box;
+    position: relative;
+    padding: 1em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    transition: backdrop-filter 500ms ease;
+}
+
+.note:hover {
+    backdrop-filter: brightness(80%);
+    cursor: pointer;
+}
+
+.note:hover .toolbar-delete {
+    opacity: 1;
+}
+
+.toolbar-delete {
+    display: block;
+    width: 15px;
+    opacity: 0;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+
+/*==========multimedia===========*/
+
+#sound-button {
+    display: block;
+    width: 25px;
+    position: absolute;
+    left: 3%;
+    top: 5%;
+    cursor: pointer;
+}
+
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}

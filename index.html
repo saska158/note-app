@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>note app</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
+</head>
+<body>
+<main>
+
+   <audio loop id="audio">
+       <source src="multimedia/smile.mp3" type="audio/mpeg">
+   </audio>
+
+    <video autoplay loop muted id="backgroundVideo">
+        <source src="multimedia/video.mp4" type="video/mp4">
+    </video>
+
+    <div class="modal">
+
+        <video  autoplay loop muted id="backgroundVideo">
+            <source src="multimedia/video.mp4" type="video/mp4">
+        </video>
+        
+        <textarea id="modal-text" placeholder="" autofocus></textarea>
+        <span id="modal-close-button">Close</span>
+              
+    </div>
+    
+    <header>
+        <h2 class="header-title">Hi!</h2>
+    </header>
+        
+    <form id="form" autocomplete="off">
+
+        <textarea id="note-text" rows="7" placeholder='save your thoughts...' autofocus></textarea>  
+        <button type="submit" id="submit-button"> <img class="tick" src="img/tick.png"></button>
+
+    </form>
+        
+      
+    <div id="notes"></div>
+
+    <img id="sound-button" src="img/nosound.png">
+
+</main>
+
+<script src="javascript/script.js"></script>
+<script src="javascript/music.js"></script>
+
+</body>
+</html>
